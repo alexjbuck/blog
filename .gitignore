@@ -27,3 +27,6 @@ public/
 # OS
 .DS_Store
 Thumbs.db
+
+# Keep GitHub workflows
+!.github/
