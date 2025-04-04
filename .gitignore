@@ -15,3 +15,15 @@ node_modules
 
 #!.yarn/cache
 .pnp.*
+
+# IDE
+.cursor/
+.vscode/
+.idea/
+
+# Zola
+public/
+
+# OS
+.DS_Store
+Thumbs.db

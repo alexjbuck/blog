@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% import "partials/blog-list.html" as blog_macros %}
+
+{% block content %}
+<article class="page">
+  <h1 class="title">{{ section.title }}</h1>
+
+  {% if section.description %}
+  <div class="page__content">
+    <p>{{ section.description }}</p>
+  </div>
+  {% endif %}
+
+  <div class="page__section">
+    {{ blog_macros::blog_list(pages=section.pages) }}
+  </div>
+</article>
+{% endblock content %}

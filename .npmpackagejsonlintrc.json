@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "require-name": "error",
+    "require-version": "error",
+    "name-format": "error",
+    "version-format": "error",
+    "require-scripts": "error",
+    "require-dependencies": "warning",
+    "require-devDependencies": "warning",
+    "no-duplicate-properties": "error",
+    "prefer-caret-version-dependencies": "warning",
+    "prefer-caret-version-devDependencies": "warning"
+  }
+} 

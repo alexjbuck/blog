@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ config.extra.site_title }}</title>
+  <meta name="description" content="{{ config.extra.site_description }}">
+  <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="navbar__brand">{{ config.extra.owner }}</a>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="/" {% if current_path == "/" %}class="active"{% endif %}>Home</a>
+        </li>
+        <li class="navbar__item">
+          <a href="/blog" {% if current_path is starting_with("/blog") %}class="active"{% endif %}>Blog</a>
+        </li>
+        <li class="navbar__item">
+          <a href="/about" {% if current_path == "/about" %}class="active"{% endif %}>About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      {% block content %} {% endblock %}
+    </div>
+  </section>
+</body>
+
+</html>

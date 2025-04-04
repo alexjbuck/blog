@@ -1,0 +1,22 @@
+{% macro blog_list(pages) %}
+<ul class="blog-list">
+  {% for page in pages %}
+  <li class="blog-list__item">
+    <article>
+      <h2 class="blog-list__title">
+        <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+      </h2>
+      {% if page.description %}
+      <p class="blog-list__description">{{ page.description }}</p>
+      {% endif %}
+      <div class="blog-list__meta">
+        <span class="blog-list__reading-time">Reading time: {{ page.reading_time }} minute(s)</span>
+      </div>
+      <div class="blog-list__excerpt">
+        {{ page.content | truncate(length=100) | safe }}
+      </div>
+    </article>
+  </li>
+  {% endfor %}
+</ul>
+{% endmacro blog_list %} 
