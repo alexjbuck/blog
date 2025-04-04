@@ -10,7 +10,6 @@
     "lint:pkg": "npmPkgJsonLint .",
     "lint:pkg:fix": "npmPkgJsonLint . --fix"
   },
-  "dependencies": {},
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.28.1",

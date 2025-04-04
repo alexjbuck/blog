@@ -5,8 +5,8 @@
     "name-format": "error",
     "version-format": "error",
     "require-scripts": "error",
-    "require-dependencies": "warning",
-    "require-devDependencies": "warning",
+    "require-dependencies": "off",
+    "require-devDependencies": "off",
     "no-duplicate-properties": "error",
     "prefer-caret-version-dependencies": "warning",
     "prefer-caret-version-devDependencies": "warning"
