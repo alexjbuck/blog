@@ -16,6 +16,11 @@
         <a href="{{ get_url(path="/") | safe }}" class="navbar__brand">{{ config.extra.site_title }}</a>
         <span class="navbar__subtitle">by {{ config.extra.owner }}</span>
       </div>
+      <button class="navbar__toggle" aria-label="Toggle navigation">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
       <ul class="navbar__menu">
         <li class="navbar__item">
           <a href="{{ get_url(path="/") | safe }}" {% if current_path == "/" %}class="active"{% endif %}>Home</a>
@@ -37,6 +42,13 @@
   </main>
 
   {% include "footer.html" %}
+  
+  <script>
+    document.querySelector('.navbar__toggle').addEventListener('click', function() {
+      document.querySelector('.navbar__menu').classList.toggle('navbar__menu--active');
+      this.classList.toggle('navbar__toggle--active');
+    });
+  </script>
 </body>
 
 </html>
