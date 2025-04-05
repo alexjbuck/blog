@@ -3,6 +3,9 @@
   "packageManager": "yarn@4.8.1",
   "version": "0.0.1",
   "scripts": {
+    "dev": "zola serve",
+    "build": "zola build",
+    "clean": "rm -rf public/",
     "lint": "yarn lint:eslint && yarn lint:pkg",
     "lint:eslint": "eslint .",
     "lint:eslint:fix": "eslint . --fix",
