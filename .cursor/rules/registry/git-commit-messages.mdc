@@ -1,5 +1,5 @@
 ---
-description: "Guidelines for formatting git commit messages without newline characters"
+description: Guidelines for formatting git commit messages without newline characters
 globs: 
 alwaysApply: false
 ---
