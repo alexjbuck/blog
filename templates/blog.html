@@ -2,17 +2,13 @@
 {% import "partials/blog-list.html" as blog_macros %}
 
 {% block content %}
-<article class="page">
+<article class="content">
   <h1 class="title">{{ section.title }}</h1>
 
   {% if section.description %}
-  <div class="page__content">
-    <p>{{ section.description }}</p>
-  </div>
+  <p>{{ section.description }}</p>
   {% endif %}
 
-  <div class="page__section">
-    {{ blog_macros::blog_list(pages=section.pages) }}
-  </div>
+  {{ blog_macros::blog_list(pages=section.pages) }}
 </article>
 {% endblock content %}

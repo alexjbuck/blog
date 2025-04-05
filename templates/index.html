@@ -2,17 +2,13 @@
 {% import "partials/blog-list.html" as blog_macros %}
 
 {% block content %}
-<article class="page">
+<article class="content">
   <h1 class="title">Welcome to {{ config.extra.site_title }}</h1>
   
-  <div class="page__content">
-    <p>This is my blog made with Zola.</p>
-  </div>
+  <p>This is my blog made with Zola.</p>
 
-  <div class="page__section">
-    <h2>Recent Posts</h2>
-    {% set section = get_section(path="blog/_index.md") %}
-    {{ blog_macros::blog_list(pages=section.pages) }}
-  </div>
+  <h2>Recent Posts</h2>
+  {% set section = get_section(path="blog/_index.md") %}
+  {{ blog_macros::blog_list(pages=section.pages) }}
 </article>
 {% endblock content %}

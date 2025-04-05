@@ -10,10 +10,8 @@
       <p class="blog-list__description">{{ page.description }}</p>
       {% endif %}
       <div class="blog-list__meta">
-        <span class="blog-list__reading-time">Reading time: {{ page.reading_time }} minute(s)</span>
-      </div>
-      <div class="blog-list__excerpt">
-        {{ page.content | truncate(length=100) | safe }}
+        <time datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+        <span class="blog-list__reading-time">· {{ page.reading_time }} min read</span>
       </div>
     </article>
   </li>
