@@ -12,16 +12,16 @@
 <body>
   <nav class="navbar">
     <div class="container">
-      <a href="/" class="navbar__brand">{{ config.extra.owner }}</a>
+      <a href="{{ get_url(path="/") | safe }}" class="navbar__brand">{{ config.extra.owner }}</a>
       <ul class="navbar__menu">
         <li class="navbar__item">
-          <a href="/" {% if current_path == "/" %}class="active"{% endif %}>Home</a>
+          <a href="{{ get_url(path="/") | safe }}" {% if current_path == "/" %}class="active"{% endif %}>Home</a>
         </li>
         <li class="navbar__item">
-          <a href="/blog" {% if current_path is starting_with("/blog") %}class="active"{% endif %}>Blog</a>
+          <a href="{{ get_url(path="/blog") | safe }}" {% if current_path is starting_with("/blog") %}class="active"{% endif %}>Blog</a>
         </li>
         <li class="navbar__item">
-          <a href="/about" {% if current_path == "/about" %}class="active"{% endif %}>About</a>
+          <a href="{{ get_url(path="/about") | safe }}" {% if current_path == "/about" %}class="active"{% endif %}>About</a>
         </li>
       </ul>
     </div>
