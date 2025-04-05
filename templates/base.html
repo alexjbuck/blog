@@ -12,7 +12,10 @@
 <body>
   <nav class="navbar">
     <div class="container">
-      <a href="{{ get_url(path="/") | safe }}" class="navbar__brand">{{ config.extra.owner }}</a>
+      <div class="navbar__brand-container">
+        <a href="{{ get_url(path="/") | safe }}" class="navbar__brand">{{ config.extra.site_title }}</a>
+        <span class="navbar__subtitle">by {{ config.extra.owner }}</span>
+      </div>
       <ul class="navbar__menu">
         <li class="navbar__item">
           <a href="{{ get_url(path="/") | safe }}" {% if current_path == "/" %}class="active"{% endif %}>Home</a>
@@ -27,11 +30,13 @@
     </div>
   </nav>
 
-  <section class="section">
+  <main class="main">
     <div class="container">
       {% block content %} {% endblock %}
     </div>
-  </section>
+  </main>
+
+  {% include "footer.html" %}
 </body>
 
 </html>
