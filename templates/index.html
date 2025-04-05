@@ -5,10 +5,10 @@
 <article class="content">
   <h1 class="title">Welcome to {{ config.extra.site_title }}</h1>
   
-  <p>This is my blog made with Zola.</p>
+  {{ section.content | safe }}
 
   <h2>Recent Posts</h2>
   {% set section = get_section(path="blog/_index.md") %}
-  {{ blog_macros::blog_list(pages=section.pages) }}
+  {{ blog_macros::blog_list(pages=section.pages | slice(end=5)) }}
 </article>
 {% endblock content %}
