@@ -167,22 +167,38 @@ body {
   }
 
   // Code blocks
-  pre, code {
+  code {
     background-color: $code-bg;
     border-radius: 4px;
     padding: 0.2em 0.4em;
     font-family: "Fira Code", monospace;
-    border: 1px solid rgba($primary-color, 0.2);
+    font-size: 0.9em;
   }
 
   pre {
+    background-color: $code-bg;
+    border-radius: 4px;
     padding: 1rem;
-    overflow-x: auto;
     margin: 1.5rem 0;
+    border: 1px solid rgba($primary-color, 0.2);
+    overflow-x: auto;
+    line-height: 1;
     
     code {
       padding: 0;
+      background: none;
       border: none;
+      font-size: 0.9em;
+      
+      // Reset any syntax highlighting backgrounds
+      .highlight & {
+        background: none;
+      }
+      
+      // Remove background from individual lines
+      span {
+        background: none !important;
+      }
     }
   }
 }
