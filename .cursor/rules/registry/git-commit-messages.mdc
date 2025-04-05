@@ -1,8 +1,8 @@
 ---
 description: "Guidelines for formatting git commit messages without newline characters"
-type: "always"
+globs: 
+alwaysApply: false
 ---
-
 # Git Commit Message Formatting
 
 ## Overview
