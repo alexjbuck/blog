@@ -1,0 +1,47 @@
+---
+description: "Guidelines for formatting git commit messages without newline characters"
+type: "always"
+---
+
+# Git Commit Message Formatting
+
+## Overview
+When creating git commit messages with multiple lines, never use `\n` newline characters in the message string. Instead, use multiple `-m` flags to create properly formatted multi-line commit messages.
+
+## Incorrect Pattern
+```bash
+# DON'T: Using \n characters in the commit message
+git commit -m "feat: Title\n\n- First point\n- Second point"
+
+# DON'T: Using a single -m with line breaks
+git commit -m "feat: Title
+
+- First point
+- Second point"
+```
+
+## Correct Pattern
+```bash
+# DO: Use multiple -m flags for each line
+git commit -m "feat: Title" -m "- First point" -m "- Second point"
+```
+
+## Explanation
+Using `\n` characters or raw newlines in git commit messages can lead to formatting issues and inconsistent display across different git tools. Using multiple `-m` flags ensures:
+
+1. Proper formatting in git log
+2. Correct display in GitHub/GitLab interfaces
+3. Consistent line breaks across all platforms
+4. Clean and readable commit history
+
+## Examples
+
+### For a feature commit with multiple bullet points:
+```bash
+git commit -m "feat: Add new feature" -m "- Implement X" -m "- Add tests" -m "- Update docs"
+```
+
+### For a bug fix with description:
+```bash
+git commit -m "fix: Resolve login issue" -m "Fixed authentication token validation" -m "- Update token check" -m "- Add error handling"
+```
