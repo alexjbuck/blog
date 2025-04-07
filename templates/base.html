@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title | lower }} | {% endif %}{{ config.extra.site_title | lower}}</title>
   <meta name="description" content="{{ config.extra.site_description }}">
+  <link rel="icon" type="image/svg+xml" href="{{ get_url(path="favicon-icon.svg") | safe }}">
   <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}">
 </head>
 
