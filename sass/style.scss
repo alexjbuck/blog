@@ -229,6 +229,12 @@ body {
   ul, ol {
     margin: 1rem 0 1.8rem 2rem;
   }
+  li > ol,ul {
+    margin: 0.5rem 0 0.5rem 2rem;
+  }
+  li > p {
+    margin: 0 0 0.5rem 0;
+  }
 
   a {
     color: $link-color;
@@ -268,19 +274,40 @@ body {
   }
 
   // Code blocks
-  pre, code {
-    background-color: $code-bg;
-    border-radius: 4px;
-    padding: 0.2em 0.4em;
-    font-family: "Fira Code", monospace;
-    border: 1px solid rgba($primary-color, 0.2);
+  /* The line numbers already provide some kind of left/right padding */
+  pre[data-linenos] {
+    padding: 1rem 0;
+  }
+  pre table td {
+    padding: 0;
+  }
+  /* The line number cells */
+  pre table td:nth-of-type(1) {
+    text-align: center;
+    vertical-align: top;
+    user-select: none;
+  }
+  pre mark {
+    /* If you want your highlights to take the full width */
+    display: block;
+    /* The default background colour of a mark is bright yellow */
+    background-color: rgba(254, 252, 232, 0.9);
+  }
+  pre table {
+    width: 100%;
+    border-collapse: collapse;
   }
 
   pre {
+    border-radius: 4px;
+    font-size: 1em;
+    line-height: 1;
+    border: 1px solid rgba($primary-color, 0.2);
     padding: 1rem;
-    overflow-x: auto;
-    margin: 1.5rem 0;
-    
+    overflow: auto;
+    font-family: "Fira Code", monospace;
+    margin: 1.5rem 1em;
+
     code {
       padding: 0;
       border: none;

@@ -3,7 +3,7 @@
   "packageManager": "yarn@4.8.1",
   "version": "0.0.1",
   "scripts": {
-    "dev": "zola serve",
+    "dev": "zola serve --drafts",
     "build": "zola build",
     "clean": "rm -rf public/",
     "lint": "yarn lint:eslint && yarn lint:pkg",
@@ -11,7 +11,8 @@
     "lint:eslint:fix": "eslint . --fix",
     "lint:fix": "yarn lint:eslint:fix && yarn lint:pkg:fix",
     "lint:pkg": "npmPkgJsonLint .",
-    "lint:pkg:fix": "npmPkgJsonLint . --fix"
+    "lint:pkg:fix": "npmPkgJsonLint . --fix",
+    "new": "node scripts/new-post.js"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",

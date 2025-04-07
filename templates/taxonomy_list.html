@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="taxonomy-list">
+    <h1>{{ taxonomy.name | title }}</h1>
+    
+    <ul>
+        {% for term in terms %}
+        <li>
+            <a href="{{ term.permalink }}">{{ term.name }}</a>
+            <span class="count">({{ term.pages | length }} posts)</span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<style>
+    .taxonomy-list {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    
+    .taxonomy-list ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .taxonomy-list li {
+        margin: 1rem 0;
+    }
+    
+    .taxonomy-list .count {
+        color: #666;
+        font-size: 0.9em;
+        margin-left: 0.5rem;
+    }
+</style>
+{% endblock content %} 
