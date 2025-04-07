@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   extends: ['eslint:recommended'],
-  ignorePatterns: ['public/**/*'],
+  ignorePatterns: ['public/**/*', '**/*.md', 'content/**/*.md'],
   overrides: [
     // JavaScript files
     {
@@ -19,12 +19,10 @@ module.exports = {
     // HTML files
     {
       files: ['**/*.html'],
-      plugins: ['html'],
-      rules: {
-        'html/indent': ['error', 2],
-        'html/require-lang': 'error',
-        'html/require-title': 'error',
+      env: {
+        browser: true,
       },
+      plugins: ['html']
     },
 
     // CSS files
