@@ -2,6 +2,9 @@
 title = "the dawn of algorithmic warfare"
 date = 2023-11-24
 description = "Republishing my article submitted to and published by the Naval Helicopter Association."
+
+[taxonomies]
+tags = ["ai", "military", "defense"]
 +++
 
 > Note: This is a republishing of an article submitted to and published by the Naval Helicopter Association. The original publication can be read [here](https://issuu.com/rotorrev/docs/rr_152_summer.21/s/12233207).

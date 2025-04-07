@@ -2,6 +2,9 @@
 title = "advent of code 2023"
 date = 2023-11-24
 description = "Discovering the Advent of Code challenge and trying my hand at some Rust!"
+
+[taxonomies]
+tags = ["rust"]
 +++
 I discovered [Advent of Code](adventofcode.com) a week ago, just in time to join in this year! I have been wanting to practice my Rust 🦀 skills, and this gave me a good opportunity for daily practice.
 

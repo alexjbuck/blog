@@ -2,6 +2,9 @@
 title = "making [an earlier version of] this site"
 date = 2022-07-18
 description= "An adventure with Gatsby and Netlify"
+
+[taxonomies]
+tags
 +++
 
 *Note: This post reflects my lessons from 2022 making an earlier iteration of this blog. It does not reflect the current tech stack or deployment.*
