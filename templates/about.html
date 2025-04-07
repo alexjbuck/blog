@@ -2,7 +2,7 @@
 
 {% block content %}
 <article class="content">
-  <h1 class="title">{{ section.title }}</h1>
+  <h1 class="title">{{ section.title | lower }}</h1>
   {{ section.content | safe }}
 </article>
 {% endblock content %}

@@ -3,10 +3,10 @@
 
 {% block content %}
 <article class="content">
-  <h1 class="title">{{ section.title }}</h1>
+  <h1 class="title">{{ section.title | lower }}</h1>
 
   {% if section.description %}
-  <p>{{ section.description }}</p>
+  <p>{{ section.description | lower }}</p>
   {% endif %}
 
   {{ blog_macros::blog_list(pages=section.pages) }}

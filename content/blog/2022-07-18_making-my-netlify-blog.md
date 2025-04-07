@@ -1,5 +1,5 @@
 +++
-title = "Making [an earlier version of] this site"
+title = "making [an earlier version of] this site"
 date = 2022-07-18
 description= "An adventure with Gatsby and Netlify"
 +++

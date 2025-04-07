@@ -3,11 +3,11 @@
 
 {% block content %}
 <article class="content">
-  <h1 class="title">Welcome to {{ config.extra.site_title }}</h1>
+  <h1 class="title">welcome to {{ config.extra.site_title | lower }}</h1>
   
   {{ section.content | safe }}
 
-  <h2>Recent Posts</h2>
+  <h2>recent posts</h2>
   {% set section = get_section(path="blog/_index.md") %}
   {{ blog_macros::blog_list(pages=section.pages | slice(end=5)) }}
 </article>

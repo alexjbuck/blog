@@ -2,8 +2,8 @@
 
 {% block content %}
 <article class="content">
-  <h1 class="title">{{ page.title }}</h1>
-  <p class="subtitle"><strong>{{ page.date }}</strong></p>
+  <h1 class="title">{{ page.title | lower }}</h1>
+  <p class="subtitle"><strong>{{ page.date | lower }}</strong></p>
   {{ page.content | safe }}
 </article>
 {% endblock content %}

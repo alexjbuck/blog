@@ -5,4 +5,4 @@ template = "index.html"
 page_template = "blog-page.html"
 +++
 
-This is my site! Built with [Zola](https://www.getzola.org/).
+Thanks for joining me here. I'm a naval aviator turned data engineer. I still do the aviator thing on the side but my main focus has been on solving hard data processing and management challenges in the undersea environment.

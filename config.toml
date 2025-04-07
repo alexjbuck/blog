@@ -29,13 +29,13 @@ render_emoji = true
 [extra]
 # Put all your custom variables here
 
-owner = "Alexander \"Jarvis\" Buck"
-site_title = "The Data Hangar"
+owner = "alexander \"jarvis\" buck"
+site_title = "the data hangar"
 site_description = "A naval aviator's journey through data engineering, where aviation meets analytics."
 
 # Social Links
 social_links = [
     { name = "GitHub", url = "https://github.com/alexjbuck" },
-    { name = "LinkedIn", url = "https://linkedin.com/in/alexjbuck" },
-    { name = "Email", url = "mailto:buck.alex.j@gmail.com" },
+    { name = "LinkedIn", url = "https://linkedin.com/in/alexjbuck-101" },
+    { name = "Email", url = "mailto:datahangar@alexjbuck.com" },
 ]

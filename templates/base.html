@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ config.extra.site_title }}</title>
+  <title>{% if page.title %}{{ page.title | lower }} | {% endif %}{{ config.extra.site_title | lower}}</title>
   <meta name="description" content="{{ config.extra.site_description }}">
   <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}">
 </head>
@@ -13,8 +13,8 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar__brand-container">
-        <a href="{{ get_url(path="/") | safe }}" class="navbar__brand">{{ config.extra.site_title }}</a>
-        <span class="navbar__subtitle">by {{ config.extra.owner }}</span>
+        <a href="{{ get_url(path="/") | safe }}" class="navbar__brand">{{ config.extra.site_title | lower }}</a>
+        <span class="navbar__subtitle">by {{ config.extra.owner | lower}}</span>
       </div>
       <button class="navbar__toggle" aria-label="Toggle navigation">
         <span class="navbar__toggle-bar"></span>
@@ -23,13 +23,22 @@
       </button>
       <ul class="navbar__menu">
         <li class="navbar__item">
-          <a href="{{ get_url(path="/") | safe }}" {% if current_path == "/" %}class="active"{% endif %}>Home</a>
+          <a href="{{ get_url(path="/") | safe }}"
+           {% if current_path == "/" %}class="active"{% endif %}>
+            home
+          </a>
         </li>
         <li class="navbar__item">
-          <a href="{{ get_url(path="/blog") | safe }}" {% if current_path is starting_with("/blog") %}class="active"{% endif %}>Blog</a>
+          <a href="{{ get_url(path="/blog") | safe }}"
+          {% if current_path is starting_with("/blog") %}class="active"{% endif %}>
+            blog
+          </a>
         </li>
         <li class="navbar__item">
-          <a href="{{ get_url(path="/about") | safe }}" {% if current_path == "/about" %}class="active"{% endif %}>About</a>
+          <a href="{{ get_url(path="/about") | safe }}"
+          {% if current_path == "/about" %}class="active"{% endif %}>
+            about
+        </a>
         </li>
       </ul>
     </div>

@@ -4,13 +4,13 @@
   <li class="blog-list__item">
     <article>
       <h2 class="blog-list__title">
-        <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+        <a href="{{ page.permalink | safe }}">{{ page.title | lower }}</a>
       </h2>
       {% if page.description %}
-      <p class="blog-list__description">{{ page.description }}</p>
+      <p class="blog-list__description">{{ page.description | lower }}</p>
       {% endif %}
       <div class="blog-list__meta">
-        <time datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+        <time datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") | lower }}</time>
         <span class="blog-list__reading-time">· {{ page.reading_time }} min read</span>
       </div>
     </article>

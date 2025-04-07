@@ -9,11 +9,9 @@ social_links = [
     { name = "Email", url = "mailto:alex@alexjbuck.com" }
 ]
 +++
+I like to build tools that let people unlock their data, I like to teach people how hunt submarines from tactical helicopters, and I like building things.
 
-
-I like to build things, I like to fly tactical helicopters, and I like solving thorny technical problems for people.
-
-## Some things I've built
+## some things I've built
 
 ### [BadMax](https://github.com/alexjbuck/badmax) (deployed at [https://badmax.dso.mil/](https://badmax.dso.mil/))
 A tool for building Air Plan documents from ashore.
@@ -31,25 +29,25 @@ A command line tool for batch processing Post Mission Analysis files from the MH
 
 The platform in my aviation community would produce all sorts of recorded information. Much of it was only accessible via click-ops graphical user interfaces. This tooling was unable to support queries against a batch of missions. As a first step in unlocking the Post Mission Analysis data file, this parser dumps the contents into standardized formats (e.g. CSV) instead of the native custom binary packed data format. 
 
-### [WaveBreaker](https://github.com/alexjbuck/wavebreaker)
+### [WaveBreaker](/wavebreaker)
 A tool for planning JDAM impact points to cover the area of uncertainty from a moving, unobserved target.
 
 During my participation in the USAF Bravo Hackathon 01, while the focus was on building machine learning systems with some classified data sources, I realized there was an interesting tactical challenge that could be addressed by a good application of some plain old maths plus a good user interface.
 I decided to break with the pack and build this tool that could be loaded onto aircrew tablets as is and be used to make an impact.
 
-## Some things I've written
+## some things I've written
 
-- "The Dawn of Algorithmic Warfare", *Rotor Review*, Spring 2021
-- "On-orbit depot architectures using contingency propellant", *Acta Astronautica*, Volume 96, March–April 2014, Pages 217–226
-- ["Path planning and position control and of an underactuated electromagnetic formation flight satellite system in the near field"](https://dspace.mit.edu/handle/1721.1/82189), Massachusetts Institute of Technology, thesis, 2013
+- [The Dawn of Algorithmic Warfare](https://issuu.com/rotorrev/docs/rr_152_summer.21/s/12233207), *Rotor Review*, Spring 2021
+- [On-orbit depot architectures using contingency propellant](https://www.sciencedirect.com/science/article/abs/pii/S0094576513004268), *Acta Astronautica*, Volume 96, March–April 2014, Pages 217–226
+- [Path planning and position control and of an underactuated electromagnetic formation flight satellite system in the near field](https://dspace.mit.edu/handle/1721.1/82189), Massachusetts Institute of Technology, thesis, 2013
 
-## Some places I studied
+## some places I studied
 
 - S.M. in Aeronautics and Astronautics, MIT, 2013
 - B.S. in Aerospace Engineering, USNA, 2011
 - Machine Learning Certificate, Stanford Online, 2021
 
-## Some things I'm okay at
+## some things I'm okay at
 
 I dabble mostly with Python and Rust, and mostly in the context of data processing, parsing, and storage.
 
