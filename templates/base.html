@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+  {% if config.extra.enable_analytics %}
+  <script data-goatcounter="https://{{ config.extra.analytics_domain }}.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  {% endif %}
+
   {# Dynamic title based on page type #}
   <title>
     {%- if page.title -%}

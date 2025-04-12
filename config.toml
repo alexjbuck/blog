@@ -57,3 +57,8 @@ social_links = [
 [[taxonomies]]
 name = "tags"
 description = "Tags for posts"
+
+analytics_domain = "alexjbuck"
+enable_analytics = true
+# Included for reference, not currently used
+analytics_provider = "goatcounter"
