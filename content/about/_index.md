@@ -9,7 +9,7 @@ social_links = [
     { name = "Email", url = "mailto:alex@alexjbuck.com" }
 ]
 +++
-I like to build tools that let people unlock their data and I like to teach people how employ maritime tactical helicopters. My current employment at Spear AI is an amazing overlap of these two worlds.
+I like to build tools that let people unlock their data and I like to teach people how employ maritime tactical helicopters. My current employment at [Spear AI](https://spear.ai) is an amazing overlap of these two worlds.
 
 I don't have a traditional education for computer science other than some basic introduction to programming for engineers using Matlab.
 Since then I've picked up various languages and skills out of necessity when building things.
