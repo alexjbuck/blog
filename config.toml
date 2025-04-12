@@ -47,6 +47,11 @@ site_keywords = "data engineering, aviation, analytics, naval aviation, software
 site_language = "en"
 site_locale = "en_US"
 
+analytics_domain = "alexjbuck"
+enable_analytics = true
+# Included for reference, not currently used
+analytics_provider = "goatcounter"
+
 # Social Links
 social_links = [
     { name = "GitHub", url = "https://github.com/alexjbuck" },
@@ -57,8 +62,3 @@ social_links = [
 [[taxonomies]]
 name = "tags"
 description = "Tags for posts"
-
-analytics_domain = "alexjbuck"
-enable_analytics = true
-# Included for reference, not currently used
-analytics_provider = "goatcounter"
