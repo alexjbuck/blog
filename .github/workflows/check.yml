@@ -23,7 +23,9 @@ jobs:
           cache: yarn
           node-version-file: .node-version
 
-      - uses: taiki-e/install-action@cargo-hack
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.20
 
       - name: Install dependencies
         run: yarn install --immutable
