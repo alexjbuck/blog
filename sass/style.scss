@@ -298,6 +298,11 @@ body {
     border-collapse: collapse;
   }
 
+  code {
+    font-family: "Fira Code", monospace;
+    color: $primary-color;
+  }
+
   pre {
     border-radius: 4px;
     font-size: 1em;
@@ -305,7 +310,6 @@ body {
     border: 1px solid rgba($primary-color, 0.2);
     padding: 1rem;
     overflow: auto;
-    font-family: "Fira Code", monospace;
     margin: 1.5rem 1em;
 
     code {
