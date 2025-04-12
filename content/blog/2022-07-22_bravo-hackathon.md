@@ -2,6 +2,9 @@
 title = "us air force BRAVO 01 hackathon"
 date = 2022-07-23
 description = "A wrap-up of the weeklong experience that was the USAF BRAVO 01 Hackathon"
+
+[taxonomies]
+tags = ["military","defense"]
 +++
 What a week.
 
