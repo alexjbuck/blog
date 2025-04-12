@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [main]
 
+# Allow only one concurrent check
+concurrency:
+  group: "check"
+  cancel-in-progress: true
+
 jobs:
   check:
     name: Run Checks
