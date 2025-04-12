@@ -23,6 +23,8 @@ jobs:
           cache: yarn
           node-version-file: .node-version
 
+      - uses: taiki-e/install-action@cargo-hack
+
       - name: Install dependencies
         run: yarn install --immutable
 
