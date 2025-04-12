@@ -9,7 +9,34 @@ social_links = [
     { name = "Email", url = "mailto:alex@alexjbuck.com" }
 ]
 +++
-I like to build tools that let people unlock their data, I like to teach people how hunt submarines from tactical helicopters, and I like building things.
+I like to build tools that let people unlock their data and I like to teach people how employ maritime tactical helicopters. My current employment at Spear AI is an amazing overlap of these two worlds.
+
+I don't have a traditional education for computer science other than some basic introduction to programming for engineers using Matlab.
+Since then I've picked up various languages and skills out of necessity when building things.
+
+When working on my Masters degree in 2011/2012 at the MIT Space Systems Lab I had to learn C to write a communication port driver on the SPHERES control system testbed.
+Then I learned enough C++ to add a module to the high fidelity simulation environment for that same test bed.
+Also while at MIT I had the pleasure of taking [18.085 Computational Science and Engineering](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/) from the legendary Professor Gilbert Strang
+which laid an amazing foundation and intuitive understanding of linear algebra that has proved extremely useful in this age of deep learning.
+
+This same project was my first introduction to version control software. By 2011 `git` had been around a few years but the lab was still using subversion (`svn`). It wasn't until years later that I was first exposed to `git`.
+
+During my time in the Navy, I picked up both Javascript and Python for building tools to solve problems I came across.
+This was largely because on the locked down IT systems I could still run client-side Javascript,
+and the ground support laptops that my aircraft used came with a Python interpreter installed as part of ArcGIS!
+
+One of those projects led me to deploying a static site onto Platform One. Using Platform One led me to learn about GitLab CI/CD pipelines. 
+
+I started reading Medium and subscribed to the Towards Data Science channel in order to get a slightly more comprehensive.
+That was great as a beginner to see the shortform articles describing various developer workflows and popular python libraries.
+
+As I got closer to starting my second career I had seen references to dreaded computer science "data structures and algorithms" courses.
+I wanted to see what that was all about so I utilized free online educational resources like MIT OpenCourseWare to watch the recorded lectures of 
+[6.006 Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-1-algorithms-and-computation/). I find it amazing and democratizing that we have free access to world class university level classes like this!
+
+While I didn't study computer science in any formal school, I think a continual learning mindset coupled with trying to solve interesting problems can
+get you as far as you want to go.
+
 
 ## some things I've built
 
