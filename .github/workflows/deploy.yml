@@ -44,6 +44,13 @@ jobs:
       - name: Build Page
         run: yarn build
 
+      - name: List public directory
+        run: |
+          echo "Contents of public directory:"
+          ls -la public/
+          echo "Looking for feed files:"
+          find public/ -name "*.xml"
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
