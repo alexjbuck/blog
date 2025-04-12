@@ -15,7 +15,7 @@ generate_sitemap = true
 
 # Generate RSS feeds
 generate_feeds = true
-feed_filenames = ["rss.xml"]
+feed_filenames = ["rss.xml", "atom.xml"]
 feed_limit = 20
 
 # Enable robots.txt generation
