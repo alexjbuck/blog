@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://alexjbuck.github.io/blog"
+base_url = "https://alexjbuck.com"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -13,9 +13,10 @@ minify_html = true
 # When set to "false", Sitemap.xml is not generated
 generate_sitemap = true
 
-# Generate RSS feed
-generate_feed = true
-feed_filename = "rss.xml"
+# Generate RSS feeds
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+feed_limit = 20
 
 # Enable robots.txt generation
 generate_robots_txt = true
