@@ -1,6 +1,7 @@
 ---
 description: Mandatory framework for learning from errors and building new rules to improve the knowledge base.
-type: agent_requested
+globs: 
+alwaysApply: false
 ---
 # Self-Learning and Error Correction
 
@@ -69,6 +70,44 @@ examples:
       .cursor/rules/my-rule.mdc
     output: "Correctly placed Cursor rule file"
 
+## How to define which rule type 
+
+The yaml-header for a rule file has 4 patterns, depending on which of the 4 modes was selected.
+
+1. Auto-attached rules -  ❌ `description`, ✅ `globs`, ❌ `alwaysApply`.
+```yaml
+---
+description: 
+globs: content/**/*.md,*.scss
+alwaysApply: false
+---
+```
+2. Agent requested rules - ✅ `description`, ❌ `globs`, ❌ `alwaysApply`.
+
+```yaml
+---
+description: Rule description
+globs: 
+alwaysApply: false
+---
+```
+3. Always apply rules - ❌ `description`, ❌ `globs`, ✅ `alwaysApply`.
+```yaml
+---
+description: 
+globs: 
+alwaysApply: true
+---
+```
+4. Manual rules - ❌ `description`, ❌ `globs`, ❌ `alwaysApply`.
+```yaml
+---
+description: 
+globs: 
+alwaysApply: false
+---
+```
+
 ## Error Categories
 Maintain specific sections for different error types.
 
@@ -94,8 +133,6 @@ This rule should evolve over time as new errors are encountered and resolved. Wh
 description: Type Error in Redpanda Connect Pipeline
 globs: *.py
 alwaysApply: false
-category: error-correction
-tags: typescript, redpanda, pipeline
 ---
 
 # TypeScript Type Error in Pipeline Configuration
