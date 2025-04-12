@@ -2,7 +2,7 @@
 title = "Building Your Cursor IDE Stdlib"
 date = 2025-04-07
 description = "A deep dive into Cursor IDE's self-learning capabilities through .cursor/rules, exploring how to build and maintain your own standard library of AI knowledge."
-draft = true
+draft = false
 
 [taxonomies]
 tags = ["cursor", "ide", "development", "ai", "productivity"]
