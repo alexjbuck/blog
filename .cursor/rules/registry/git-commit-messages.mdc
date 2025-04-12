@@ -1,8 +1,8 @@
 ---
-description: Guidelines for formatting git commit messages without newline characters
-globs: 
-alwaysApply: false
+description: "Guidelines for formatting git commit messages without newline characters"
+type: "always"
 ---
+
 # Git Commit Message Formatting
 
 ## Overview
@@ -44,4 +44,4 @@ git commit -m "feat: Add new feature" -m "- Implement X" -m "- Add tests" -m "- 
 ### For a bug fix with description:
 ```bash
 git commit -m "fix: Resolve login issue" -m "Fixed authentication token validation" -m "- Update token check" -m "- Add error handling"
-```
+``` 
