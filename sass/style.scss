@@ -467,4 +467,43 @@ body {
       margin: 1.8rem 0 1rem;
     }
   }
+}
+
+// 404 page styles
+.container--content {
+  .status-404 {
+    background-color: $accent-color;
+    padding: 2rem;
+    border-radius: 4px;
+    border: 1px solid rgba($primary-color, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    p {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+    }
+
+    ul {
+      margin: 0;
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 0.5rem 0;
+        &:before {
+          content: ">";
+          margin-right: 0.5rem;
+          color: $primary-color;
+        }
+      }
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      &:hover {
+        text-shadow: 0 0 8px rgba($primary-color, 0.5);
+      }
+    }
+  }
 } 

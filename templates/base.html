@@ -23,7 +23,9 @@
   <meta property="og:type" content="{% if page %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% elif section.title %}{{ section.title }}{% else %}{{ config.extra.site_title }}{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}{{ config.extra.site_description }}{% endif %}">
+  {% if current_url %}
   <meta property="og:url" content="{{ current_url | safe }}">
+  {% endif %}
   <meta property="og:site_name" content="{{ config.extra.site_title }}">
   
   {# Twitter Card tags #}
@@ -45,7 +47,9 @@
   {% endif %}
 
   {# Canonical URL #}
+  {% if current_url %}
   <link rel="canonical" href="{{ current_url | safe }}">
+  {% endif %}
   
   {# Author info #}
   <meta name="author" content="{{ config.extra.owner }}">
@@ -62,7 +66,7 @@
   {% endblock %}
 
   {# Structured data for blog posts #}
-  {% if page %}
+  {% if page and current_url %}
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -99,19 +103,19 @@
       <ul class="navbar__menu">
         <li class="navbar__item">
           <a href="{{ get_url(path="/") | safe }}"
-           {% if current_path == "/" %}class="active"{% endif %}>
+           {% if current_path and current_path == "/" %}class="active"{% endif %}>
             home
           </a>
         </li>
         <li class="navbar__item">
           <a href="{{ get_url(path="/blog") | safe }}"
-          {% if current_path is starting_with("/blog") %}class="active"{% endif %}>
+          {% if current_path and current_path is starting_with("/blog") %}class="active"{% endif %}>
             blog
           </a>
         </li>
         <li class="navbar__item">
           <a href="{{ get_url(path="/about") | safe }}"
-          {% if current_path == "/about" %}class="active"{% endif %}>
+          {% if current_path and current_path == "/about" %}class="active"{% endif %}>
             about
         </a>
         </li>
