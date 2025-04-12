@@ -8,10 +8,17 @@ compile_sass = true
 build_search_index = true
 
 # When set to "true", the generated HTML files are minified.
-minify_html = false
+minify_html = true
 
 # When set to "false", Sitemap.xml is not generated
 generate_sitemap = true
+
+# Generate RSS feed
+generate_feed = true
+feed_filename = "rss.xml"
+
+# Enable robots.txt generation
+generate_robots_txt = true
 
 [markdown]
 # Whether to do syntax highlighting
@@ -26,12 +33,18 @@ highlight_code = true
 # Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
 render_emoji = true
 
+# Enable smart punctuation
+smart_punctuation = true
+
 [extra]
 # Put all your custom variables here
 
 owner = "alexander \"jarvis\" buck"
 site_title = "the data hangar"
 site_description = "A naval aviator's journey through data engineering, where aviation meets analytics."
+site_keywords = "data engineering, aviation, analytics, naval aviation, software development, python, rust"
+site_language = "en"
+site_locale = "en_US"
 
 # Social Links
 social_links = [

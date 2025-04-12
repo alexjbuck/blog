@@ -4,10 +4,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title | lower }} | {% endif %}{{ config.extra.site_title | lower}}</title>
-  <meta name="description" content="{{ config.extra.site_description }}">
+  
+  {# Dynamic title based on page type #}
+  <title>
+    {%- if page.title -%}
+      {{ page.title | lower }} | {{ config.extra.site_title | lower}}
+    {%- elif section.title -%}
+      {{ section.title | lower }} | {{ config.extra.site_title | lower}}
+    {%- else -%}
+      {{ config.extra.site_title | lower }}
+    {%- endif -%}
+  </title>
+
+  {# Dynamic description based on page type #}
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}{{ config.extra.site_description }}{% endif %}">
+  
+  {# Open Graph tags #}
+  <meta property="og:type" content="{% if page %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% elif section.title %}{{ section.title }}{% else %}{{ config.extra.site_title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}{{ config.extra.site_description }}{% endif %}">
+  <meta property="og:url" content="{{ current_url | safe }}">
+  <meta property="og:site_name" content="{{ config.extra.site_title }}">
+  
+  {# Twitter Card tags #}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% elif section.title %}{{ section.title }}{% else %}{{ config.extra.site_title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}{{ config.extra.site_description }}{% endif %}">
+  
+  {# Article specific meta tags #}
+  {% if page.date %}
+  <meta property="article:published_time" content="{{ page.date }}">
+  {% endif %}
+  {% if page.updated %}
+  <meta property="article:modified_time" content="{{ page.updated }}">
+  {% endif %}
+  {% if page.taxonomies.tags %}
+  {% for tag in page.taxonomies.tags %}
+  <meta property="article:tag" content="{{ tag }}">
+  {% endfor %}
+  {% endif %}
+
+  {# Canonical URL #}
+  <link rel="canonical" href="{{ current_url | safe }}">
+  
+  {# Author info #}
+  <meta name="author" content="{{ config.extra.owner }}">
+  
+  {# Favicon #}
   <link rel="icon" type="image/svg+xml" href="{{ get_url(path="favicon-icon.svg") | safe }}">
+  
+  {# Styles #}
   <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}">
+
+  {# Structured data for blog posts #}
+  {% if page %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ page.title }}",
+      "datePublished": "{{ page.date }}",
+      {% if page.updated %}"dateModified": "{{ page.updated }}",{% endif %}
+      "author": {
+        "@type": "Person",
+        "name": "{{ config.extra.owner }}"
+      },
+      "description": "{{ page.description }}",
+      "url": "{{ current_url | safe }}"
+      {% if page.taxonomies.tags %},
+      "keywords": "{{ page.taxonomies.tags | join(sep=", ") }}"
+      {% endif %}
+    }
+  </script>
+  {% endif %}
 </head>
 
 <body>
