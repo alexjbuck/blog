@@ -16,7 +16,7 @@ Information trickled out over the following days and at least I knew the schedul
 
 I was still nervous about my ability to provide anything meaningful at the event. This was the USAF BRAVO Hackathon! I'd heard a lot about the first iteration held in Nellis AFB and it sounded like a serious affair.
 
-# Day 1: Monday
+## Day 1: Monday
 
 I arrived at 0900 to a notification from my friend that work commitments held him up and he would be late. _Alright_, I'll be going into this one alone. I walk in and there's already a large group of folks sitting at the tables around the room. I pick a table near the back and get some coffee. 
 
@@ -28,7 +28,7 @@ I think most people were configuring an environment as a way of putting of diggi
 
 The first day ended with a more-or-less functional development environment on JCN once it finally came up. I had a git repository and a functioning python environment.
 
-# Day 2 Onward
+## Day 2 Onward
 
 The second day started early, and uncertain. I still had no idea what I wanted to do. I was in the same boat as I think many where "I wanted to do something with the ___ data", but what that something was, or what problem it solved? I couldn't say.
 
@@ -50,7 +50,7 @@ The core of the application had come together by Wednesday night, but the interf
 
 Beyond the scope of the Hackathon, I was now genuinely excited about the tool we'd made. I thought it had real application and had produced some fairly compelling results. I didn't have the exact right parameters in it (I was going off memory from a classified report I briefly saw once), but they were close enough that I felt this was really cool.
 
-# Data and Software
+## Data and Software
 
 A few people asked me what data we were using, or suggested ways that maybe the existing data could be plugged into the tool we'd built. These questions seemed to come from a perspective that "well, it would be better if you used _data_". This brings me to my strongest conclusion from the event: 
 
@@ -64,7 +64,7 @@ The other observation from these interactions is that we need to be problem-cent
 
 It can be fun to run analyses, but the only reason we're doing it is to solve a problem. Data has a value proportional to its ability to help us solve problems or answer questions.
 
-# Wrap up
+## Wrap up
 
 I would definitely attend an event like this again. We were warned at the beginning that the first day or so would be awkward. It was. It still felt wrong, but teams got to a good place by the end of the week. Maybe that's just how these things work. I think Stuart Wagner and the USAF team supporting BRAVO Hackathon will take some of the lessons observed here and the next iteration will be even more successful.
 

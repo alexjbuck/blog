@@ -213,6 +213,11 @@ There's a new issue that this case study reveals as well:
 > despite pulling from the same source data, this second "data pathway" requires 
 a completely separate set of tools and procedures for extracting data.
 
+Both the acoustic and electronic-warfare data recording processes ask for a
+aircraft side number, takeoff/land times, and a "narrative" or description of
+the flight event. It feels bad to have to duplicative data entry like this,
+especially when some of this information is _in_ the data itself!
+
 ## a platform-aligned approach
 
 Both of these data recording efforts are domain-aligned. Once is for 
@@ -222,3 +227,18 @@ those respective domains, dividing things this way makes a lot of sense.
 This however, _creates_ `friction` for the aircrew responsible for recording 
 this data rather than reducing it. This way of dividing data extraction fails to 
 under the first of our two-fold problems.
+
+Our ideal data extraction tooling would be something that adds minimal time to
+post-flight duties, automates as many tasks as possible, and makes any human
+input so intuitive that you don't even need a checklist. The final challenge,
+regarding pressure to complete the process can be assisted by providing a clear
+dashboard or visibility layer to whether or not the data from a flight was
+actually recorded.
+
+This baseline tooling should be extensible such that domain-aligned processing
+can "hook" into it and access the relevant information while the _user
+interface_ is platform aligned for the benefit of the platform operator.
+
+## Cronus
+
+Architecture for platform aligned data extraction.
