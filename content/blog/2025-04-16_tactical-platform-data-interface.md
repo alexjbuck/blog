@@ -2,7 +2,7 @@
 title = "tactical platform data interface"
 date = 2025-04-16
 description = "Thoughts on building good human interfaces for data collection from tactical systems"
-draft = true
+draft = false
 
 [taxonomies]
 tags = ["defense","data"]
@@ -241,4 +241,71 @@ interface_ is platform aligned for the benefit of the platform operator.
 
 ## Cronus
 
-Architecture for platform aligned data extraction.
+Cronus is a tool I wrote for MH-60R operators to streamline the required
+aircrew actions for collecting post-mission recorded data into as few as 3
+mouse clicks and 3 key presses, 4 mouse clicks if you count running the
+program, well fine, 5 if you use a double click to open it. Either way, its an
+interface that speaks the same language as aircrew not the engineers and has
+very few required interactions.
+
+> I'll never forget when I asked an aircrewman to open up the windows file
+explorer so we could copy data off the data transfer devices (DTDs), and he
+responded with "what's that?"
+
+The tool does this by understanding the workflow, making judicious assumptions,
+and automating anything that's remotely possible to automate (while providing a
+manual backup for edge cases if automation fails).
+
+To illustrate this, it asks for the Squadron, AOR (area of responsibility, i.e.
+geographic region), aircraft serial number, landing time time, and Windows
+drive letters for the USB data devices once they're mounted. Squadron is
+somethign that almost never changes so the app remembers what the value was
+entered during the last usage, meaning realistically this gets set once and
+doesn't need to be interacted with for months. The AOR changes, but slowly.
+Just as with the squadron the app remembers the last input value but exposes a
+simple editable text entry where a new value can be entered and remembered when
+changing between AORs. The aircraft serial number must be put in manually. It
+is a sad reality that while the recorded data includes a value for aircraft
+serial number but it is not trustworthy as it is simply a reflection of what
+was selected when the aircraft mission data was prepared, and by knowing the
+habitual workflow of fleet operators, that is often not accurately set as there
+is essentially no negative impact to it not being set correctly, other than the
+data being mis-labeled. Entering this value is the source of the 3 key strokes.
+The landing time is pre-populated by the current time when the application is
+opened. The landing time here is only used to generate a "close enough" time
+stamp so a unique folder name can be constructed that also has some real-world
+meaning. A _better_ option would be to parse the recorded data and pull out the
+launch time, and this is something I would like to implement soon. Either way,
+the automatic value is sufficient. Finally the windows drive letters. The
+application assumes that the most likely use case for archiving the data is
+right after a flight when you have the recorded data on the data transfer
+devices (DTDs). Because this is the known workflow, we can make this assumption
+and scan all available Windows drives and heuristically evaluate if they are a
+DTD. If they are, then the app will automatically select them for archiving. In
+the off chance that the drives are not detected, or non-data drives are
+detected and selected for archiving, there are buttons to clear the list, which
+_automatically_ disables the automatic selection feature and lets you use the
+manual selection feature. Finally there is a large obvious, colored button that
+you press to begin the data transfer/archive process. 
+
+Before you ask, yes I did provide a _checklist_ for this tool but it was a
+single page kneeboard-card (KBC) size format, and feedback from users was that
+it required no additional instruction to understand.
+
+Using the Cronus tool I saw an extremely consistent result in terms of an
+organized archive of flight data. We offloaded the procedural and formulaic
+parts onto the computer and let the human only provide the minimum of necessary
+input. This is a more enjoyable, effective, and time efficient tool
+interaction.
+
+## Now what?
+
+Data collection and archive processes should focus on platform-aligned tooling
+and be extremely aware of the existing workflows of the operators who will
+ultimately be responsible for effecting the data collection. The wording used
+in the collection tooling should match operators vernacular and not the
+engineering vocabulary unless this leads to ambiguity. 
+
+If you're in the MH-60R community and you want to learn more about Cronus or
+how to expand upon it, reach to me through my Navy email, I am findable in the
+global address list.
