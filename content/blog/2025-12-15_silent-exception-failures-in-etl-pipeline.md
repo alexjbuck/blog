@@ -2,7 +2,6 @@
 title = "Silent Exception Failures in ETL"
 date = 2025-12-15
 description = "A production ETL run lost 198 rows (0.0013% of 15.2M total) when asyncpg connection errors caused worker processes to crash silently without retry logic or exit code checking. Python's exception-based error handling made this vulnerability invisible—unlike Rust's Result<T, E> which forces explicit error handling at compile time, Python function signatures don't indicate what exceptions can be raised, making defensive programming entirely optional and prone to being overlooked."
-draft = true
 
 [taxonomies]
 tags = ["data","etl","python","rust","error handling","exception","result"]
